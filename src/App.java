@@ -3,7 +3,6 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.util.Map;
 import java.util.Scanner;
 
 import com.google.gson.FieldNamingPolicy;
@@ -13,22 +12,21 @@ import com.google.gson.GsonBuilder;
 import models.Moneda;
 
 public class App {
-    @SuppressWarnings("resource")
     public static void main(String[] args) throws IOException, InterruptedException {
 
         try{
-
-            Scanner consola = new Scanner(System.in);
-
             while (true) {
+
+                Scanner consola = new Scanner(System.in);
                 
                 System.out.println("""
-                    ******************************************************
+                    ***************************************************************************************
                         1- Convertir 
                         2- Comparacion global
                         0- Salir
-                    ******************************************************                        
+                    ***************************************************************************************
                         """);
+                System.out.print(">> ");
                 int menu = consola.nextInt();
 
                     String apiUlr = "https://v6.exchangerate-api.com/v6/" ;
@@ -39,15 +37,15 @@ public class App {
                     
                 if(menu == 1){
                     
-                    System.out.println("Ingrese la moneda o el pais a convertir");
+                    System.out.println("Ingrese la moneda a convertir");
                     System.out.print(">> ");
                     moneda1 = consola.next();    
                 
-                    System.out.println("Ingrese la moneda o el pais a convertir");
+                    System.out.println("Ingrese la moneda a convertir");
                     System.out.print(">> ");
                     moneda2 = consola.next();
 
-                    System.out.println("Ingrese el monto a convertir");
+                    System.out.println("Ingrese el monto");
                     System.out.print(">> ");
                     monto = consola.next();
 
@@ -69,10 +67,9 @@ public class App {
                     Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create();
                     Moneda moneda = gson.fromJson(json, Moneda.class);
 
-                    System.out.println("--------------------------------------------\n"
+                    System.out.println("----------------------------------------------------------------------------------------\n"
                     + " " + monto + " " + moneda1.toUpperCase() + " == " + moneda.getConversionResult()+ " " + moneda2.toUpperCase() );
-                    System.out.println("--------------------------------------------");
-                    System.out.println(moneda.getConversionResult());
+                    System.out.println("----------------------------------------------------------------------------------------");
                 }
 
                 if(menu == 2){
@@ -95,8 +92,10 @@ public class App {
                     Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).setPrettyPrinting().create();
                     Moneda moneda = gson.fromJson(json, Moneda.class);
 
-                    System.out.println("1 " + moneda1.toUpperCase() + " equivale a: \n" + moneda.getComparisonResults());
-
+                    System.out.println("----------------------------------------------------------------------------------------\n"
+                    + "1 " + moneda1.toUpperCase() + " equivale a: \n" + moneda.getComparisonResults());
+                    System.out.println("----------------------------------------------------------------------------------------");
+                    
                 }
 
                 if(menu == 0){
