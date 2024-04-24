@@ -1,4 +1,10 @@
 # Conversor de divisas
+
+## Descripcion
+
+Este es un desafío de programación realizado en **Java** parte del progrma ONE de Oracle y Alura Latam, se trata de un Conversor de Monedas. Se implementó la API de Exchange Rate API para las solicitudes de tasas de cambio, también se utilizó la librería Gson para manipular datos JSON. La interfaz de usuario es a través de consola.
+
+
 ## Menu
 
 ```
