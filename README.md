@@ -8,11 +8,22 @@ Este es un desafío de programación realizado en **Java** parte del progrma ONE
 ## Menu
 
 ```
-***************************************************************************************
-    1- Convertir 
-    2- Comparacion global
-    0- Salir
-***************************************************************************************
+                    *****************************************************************************
+                    *                BIENVENIDO AL CONVERSOR DE DIVISAS                         *
+                    *****************************************************************************
+                    * Mas Utilizadas:                                                           *
+                    *                                                                           *
+                    *   USD - Estados Unidos        CAD - Canada                                *
+                    *   EUR - Union Europea         CHF - Suiza                                 *
+                    *   GBP - Reino Unido           CNY - China                                 *
+                    *   JPY - Japon                 SEK - Suecia                                *
+                    *   AUD - Australia             NZD - Nueva Zelanda                         *
+                    *                                                                           *
+                    *****************************************************************************
+                    *    1- Convertir                                                           *
+                    *    2- Comparacion global                                                  *
+                    *    0- Salir                                                               *
+                    *****************************************************************************
 >>
 ```
 ### Opcion 1
