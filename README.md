@@ -54,4 +54,3 @@ Ingrese la moneda o el pais para comparar
 ```
 ## Librerias
 - Gson 2.10.1
->>>>>>> 0f1e1cc45fab40b8f98cf917ac1f5e9ef5c2da56
