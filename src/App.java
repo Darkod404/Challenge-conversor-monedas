@@ -20,12 +20,24 @@ public class App {
                 Scanner consola = new Scanner(System.in);
                 
                 System.out.println("""
-                    ***************************************************************************************
-                        1- Convertir 
-                        2- Comparacion global
-                        0- Salir
-                    ***************************************************************************************
+                    *****************************************************************************
+                    *                BIENVENIDO AL CONVERSOR DE DIVISAS                         *
+                    *****************************************************************************
+                    * Mas Utilizadas:                                                           *
+                    *                                                                           *
+                    *   USD - Estados Unidos        CAD - Canada                                *
+                    *   EUR - Union Europea         CHF - Suiza                                 *
+                    *   GBP - Reino Unido           CNY - China                                 *
+                    *   JPY - Japon                 SEK - Suecia                                *
+                    *   AUD - Australia             NZD - Nueva Zelanda                         *
+                    *                                                                           *
+                    *****************************************************************************
+                    *    1- Convertir                                                           *
+                    *    2- Comparacion global                                                  *
+                    *    0- Salir                                                               *
+                    *****************************************************************************
                         """);
+                System.out.println("Seleccione una opcion:");
                 System.out.print(">> ");
                 int menu = consola.nextInt();
 
@@ -67,9 +79,9 @@ public class App {
                     Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create();
                     Moneda moneda = gson.fromJson(json, Moneda.class);
 
-                    System.out.println("----------------------------------------------------------------------------------------\n"
-                    + " " + monto + " " + moneda1.toUpperCase() + " == " + moneda.getConversionResult()+ " " + moneda2.toUpperCase() );
-                    System.out.println("----------------------------------------------------------------------------------------");
+                    System.out.println("-----------------------------------------------------------------------------\n"
+                    + "                         " + monto + " " + moneda1.toUpperCase() + " == " + moneda.getConversionResult()+ " " + moneda2.toUpperCase() );
+                    System.out.println("-----------------------------------------------------------------------------");
                 }
 
                 if(menu == 2){
@@ -95,6 +107,7 @@ public class App {
                     System.out.println("----------------------------------------------------------------------------------------\n"
                     + "1 " + moneda1.toUpperCase() + " equivale a: \n" + moneda.getComparisonResults());
                     System.out.println("----------------------------------------------------------------------------------------");
+                    
                     
                 }
 
