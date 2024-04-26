@@ -1,13 +1,29 @@
 # Conversor de divisas
+
+## Descripcion
+
+Este es un desafío de programación realizado en **Java** parte del progrma ONE de Oracle y Alura Latam, se trata de un Conversor de Monedas. Se implementó la API de Exchange Rate API para las solicitudes de tasas de cambio, también se utilizó la librería Gson para manipular datos JSON. La interfaz de usuario es a través de consola.
+
+
 ## Menu
 
 ```
-***************************************************************************************
-    1- Convertir 
-    2- Comparacion global
-    0- Salir
-***************************************************************************************
->>
+              *****************************************************************************
+              *                BIENVENIDO AL CONVERSOR DE DIVISAS                         *
+              *****************************************************************************
+              * Mas Utilizadas:                                                           *
+              *                                                                           *
+              *   USD - Estados Unidos        CAD - Canada                                *
+              *   EUR - Union Europea         CHF - Suiza                                 *
+              *   GBP - Reino Unido           CNY - China                                 *
+              *   JPY - Japon                 SEK - Suecia                                *
+              *   AUD - Australia             NZD - Nueva Zelanda                         *
+              *                                                                           *
+              *****************************************************************************
+              *    1- Convertir                                                           *
+              *    2- Comparacion global                                                  *
+              *    0- Salir                                                               *
+              *****************************************************************************
 ```
 ### Opcion 1
 ```
@@ -20,9 +36,9 @@ Ingrese el monto
 ```
 ### Respuesta 
 ```
-----------------------------------------------------------------------------------------
- 15 USD == 14.031 EUR
-----------------------------------------------------------------------------------------
+              -----------------------------------------------------------------------------
+                                     15 USD == 14.031 EUR
+              -----------------------------------------------------------------------------
 ```
 ### Opcion 2
 ```
@@ -38,3 +54,4 @@ Ingrese la moneda o el pais para comparar
 ```
 ## Librerias
 - Gson 2.10.1
+>>>>>>> 0f1e1cc45fab40b8f98cf917ac1f5e9ef5c2da56
